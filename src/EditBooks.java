@@ -1,17 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
-
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,13 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-/**
- *A public class
- */
 public class EditBooks extends JInternalFrame {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for creating the North Panel
 	private JPanel northPanel = new JPanel();
@@ -180,11 +160,7 @@ public class EditBooks extends JInternalFrame {
 		informationPanel.setBorder(BorderFactory.createTitledBorder("Edit a book: "));
 		//for setting the layout
 		informationLabelPanel.setLayout(new GridLayout(10, 1, 1, 1));
-		/***********************************************************************
-		 * for adding the strings to the labels, for setting the font 		   *
-		 * and adding these labels to the panel.							   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
+
 		for (int i = 0; i < informationLabel.length; i++) {
 			informationLabelPanel.add(informationLabel[i] = new JLabel(informationString[i]));
 			informationLabel[i].setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -193,11 +169,7 @@ public class EditBooks extends JInternalFrame {
 
 		//for setting the layout
 		informationTextFieldPanel.setLayout(new GridLayout(10, 1, 1, 1));
-		/***********************************************************************
-		 * for adding the strings to the labels, for setting the font 		   *
-		 * and adding these labels to the panel.							   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
+
 		for (int i = 0; i < informationTextField.length; i++) {
 			informationTextFieldPanel.add(informationTextField[i] = new JTextField(25));
 			informationTextField[i].setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -206,11 +178,6 @@ public class EditBooks extends JInternalFrame {
 		}
 		informationPanel.add("East", informationTextFieldPanel);
 
-		/***********************************************************************
-		 * for setting the layout for the panel,setting the font for the button*
-		 * and adding the button to the panel.								   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
 		updateInformationButtonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		updateInformationButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		updateInformationButtonPanel.add(updateInformationButton);
@@ -218,22 +185,13 @@ public class EditBooks extends JInternalFrame {
 		centerPanel.add("Center", informationPanel);
 		cp.add("Center", centerPanel);
 
-		/***********************************************************************
-		 * for setting the layout for the panel,setting the font for the button*
-		 * adding the button to the panel & setting the border.				   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
 		southPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		exitButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		southPanel.add(exitButton);
 		southPanel.setBorder(BorderFactory.createEtchedBorder());
 		cp.add("South", southPanel);
 
-		/***********************************************************************
-		 * for adding the action listener to the button,first the text will be *
-		 * taken from the JTextField[] and make the connection for database,   *
-		 * after that update the table in the database with the new value      *
-		 ***********************************************************************/
+
 		editButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				//for checking if there is a missing information
@@ -271,11 +229,7 @@ public class EditBooks extends JInternalFrame {
 			}
 		});
 
-		/***********************************************************************
-		 * for adding the action listener to the button,first the text will be *
-		 * taken from the JTextField[] and make the connection for database,   *
-		 * after that update the table in the database with the new value      *
-		 ***********************************************************************/
+
 		updateInformationButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				//for checking if there is a missing information

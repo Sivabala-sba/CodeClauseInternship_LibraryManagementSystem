@@ -1,23 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
-
-//import the packages for using the classes in them into the program
-
 import java.sql.*;
 
 public class Books {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	private Connection connection = null;
 	private Statement statement = null;
@@ -108,11 +91,7 @@ public class Books {
 		catch (Exception e) {
 			System.out.println("Books.java\n" + e.toString());
 		}
-		/***************************************************************
-		 * for making the connection,creating the statement and update *
-		 * the table in the database. After that,closing the statmenet *
-		 * and connection. There is catch block SQLException for error *
-		 ***************************************************************/
+
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","1234");
 			statement = connection.createStatement();
@@ -152,11 +131,7 @@ public class Books {
 		catch (Exception e) {
 			System.out.println("Books.java\n" + e.toString());
 		}
-		/***************************************************************
-		 * for making the connection,creating the statement and update *
-		 * the table in the database. After that,closing the statmenet *
-		 * and connection. There is catch block SQLException for error *
-		 ***************************************************************/
+
 		try {
 			//connection = DriverManager.getConnection("jdbc:odbc:JLibrary2");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","1234");

@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,14 +9,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-/**
- *A public class
- */
 public class AddBooks extends JInternalFrame {
 
-    /***************************************************************************
-     ***      declaration of the private variables used in the program       ***
-     ***************************************************************************/
 
     //for creating the North Panel
     private JPanel northPanel = new JPanel();
@@ -117,11 +99,7 @@ public class AddBooks extends JInternalFrame {
         centerPanel.setBorder(BorderFactory.createTitledBorder("Add a new book:"));
         //for setting the layout
         informationLabelPanel.setLayout(new GridLayout(11, 1, 1, 1));
-        /***********************************************************************
-         * for adding the strings to the labels, for setting the font 		   *
-         * and adding these labels to the panel.							   *
-         * finally adding the panel to the container						   *
-         ***********************************************************************/
+
         for (int i = 0; i < informationLabel.length; i++) {
             informationLabelPanel.add(informationLabel[i] = new JLabel(informationString[i]));
             informationLabel[i].setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -130,11 +108,7 @@ public class AddBooks extends JInternalFrame {
 
         //for setting the layout
         informationTextFieldPanel.setLayout(new GridLayout(11, 1, 1, 1));
-        /***********************************************************************
-         * for adding the strings to the labels, for setting the font 		   *
-         * and adding these labels to the panel.							   *
-         * finally adding the panel to the container						   *
-         ***********************************************************************/
+
         for (int i = 0; i < informationTextField.length; i++) {
             informationTextFieldPanel.add(informationTextField[i] = new JTextField(25));
             informationTextField[i].setFont(new Font("Tahoma", Font.PLAIN, 11));
@@ -148,22 +122,14 @@ public class AddBooks extends JInternalFrame {
         txtShelfNo.addKeyListener(new keyListener());
         centerPanel.add("East", informationTextFieldPanel);
 
-        /***********************************************************************
-         * for setting the layout for the panel,setting the font for the button*
-         * and adding the button to the panel.								   *
-         * finally adding the panel to the container						   *
-         ***********************************************************************/
+
         insertInformationButtonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         insertInformationButton.setFont(new Font("Tahoma", Font.BOLD, 11));
         insertInformationButtonPanel.add(insertInformationButton);
         centerPanel.add("South", insertInformationButtonPanel);
         cp.add("Center", centerPanel);
 
-        /***********************************************************************
-         * for setting the layout for the panel,setting the font for the button*
-         * adding the button to the panel & setting the border.				   *
-         * finally adding the panel to the container						   *
-         ***********************************************************************/
+
         southPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
         OKButton.setFont(new Font("Tahoma", Font.BOLD, 11));
         southPanel.add(OKButton);
@@ -171,11 +137,6 @@ public class AddBooks extends JInternalFrame {
         cp.add("South", southPanel);
 
 
-        /***********************************************************************
-         * for adding the action listener to the button,first the text will be *
-         * taken from the JTextField[] and make the connection for database,   *
-         * after that update the table in the database with the new value      *
-         ***********************************************************************/
         insertInformationButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent ae) {

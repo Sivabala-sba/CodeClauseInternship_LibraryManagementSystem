@@ -1,25 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
 import javax.swing.table.AbstractTableModel;
 import java.sql.*;
 
-/**
- *ResultSet rows and columns are counted from 1 and JTable
- *rows and columns are counted from 0. When processing
- *ResultSet rows or columns for use in a JTable, it is
- *necessary to add 1 to the row or column number to manipulate
- *the appropriate ResultSet column (i.e., JTable column 0 is
- *ResultSet column 1 and JTable row 0 is ResultSet row 1)
- */
 public class ResultSetTableModel extends AbstractTableModel {
 	private Connection connection;
 	private Statement statement;

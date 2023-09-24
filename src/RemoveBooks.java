@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,13 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- *A public class
- */
 public class RemoveBooks extends JInternalFrame {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for creating the North Panel
 	private JPanel northPanel = new JPanel();
@@ -123,11 +105,6 @@ public class RemoveBooks extends JInternalFrame {
 		//for add the south panel to the container
 		cp.add("South", southPanel);
 
-		/***********************************************************************
-		 * for adding the action listener to the button,first the text will be *
-		 * taken from the JTextField and make the connection for database,     *
-		 * after that update the table in the database with the new value      *
-		 ***********************************************************************/
 		removeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				//for checking if there is a missing information

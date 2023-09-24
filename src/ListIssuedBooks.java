@@ -1,14 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 import java.awt.*;
@@ -18,14 +7,8 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.sql.SQLException;
 
-/**
- *A public class
- */
 public class ListIssuedBooks extends JInternalFrame {
 
-    /***************************************************************************
-     ***      declaration of the private variables used in the program       ***
-     ***************************************************************************/
 
     //for creating the North Panel
     private JPanel northPanel = new JPanel();
@@ -44,9 +27,6 @@ public class ListIssuedBooks extends JInternalFrame {
 
     //for creating an object for the ResultSetTableModel class
     private ResultSetTableModel tableModel;
-    /***************************************************************************
-     * for setting the required information for the ResultSetTableModel class. *
-     ***************************************************************************/
    // private static final String JDBC_DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     //private static final String DATABASE_URL = "jdbc:odbc:JLibrary";

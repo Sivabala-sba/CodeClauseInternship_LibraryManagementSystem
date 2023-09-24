@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
-//import the packages for using the classes in them into the program
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -17,9 +5,6 @@ import javax.management.JMException;
 
 public class Menubar extends JMenuBar {
 
-    /***************************************************************************
-     ***      declaration of the private variables used in the program       ***
-     ***************************************************************************/
 
     //for creating the JMenu for the program
     public JMenu fileMenu,  bookMenu,  memberMenu,  searchMenu,  loanMenu,  toolsMenu,  helpMenu;

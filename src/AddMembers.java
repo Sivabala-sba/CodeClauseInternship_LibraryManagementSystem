@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -19,13 +7,7 @@ import java.awt.event.KeyEvent;
 import java.util.Arrays;
 import java.util.Date;
 
-/**
- *A public class
- */
 public class AddMembers extends JInternalFrame {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for creating the North Panel
 	private JPanel northPanel = new JPanel();
@@ -159,11 +141,7 @@ public class AddMembers extends JInternalFrame {
 		informationLabelPanel.setLayout(new GridLayout(7, 1, 1, 1));
 		//for setting the layout
 		informationTextFieldPanel.setLayout(new GridLayout(7, 1, 1, 1));
-		/***********************************************************************
-		 * for adding the strings to the labels, for setting the font		   *
-		 * and adding these labels to the panel.							   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
+
 		for (int i = 0; i < informationLabel.length; i++) {
 			informationLabelPanel.add(informationLabel[i] = new JLabel(informaionString[i]));
 			informationLabel[i].setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -171,11 +149,7 @@ public class AddMembers extends JInternalFrame {
 		//for adding the panel to the centerPanel
 		centerPanel.add("West", informationLabelPanel);
 
-		/***********************************************************************
-		 * for adding the JTextField and JPasswordField to the panel and       *
-		 * setting the font to the JTextField and JPasswordField. Finally      *
-		 * adding the panel to the centerPanel                                 *
-		 ***********************************************************************/
+
 		for (int i = 0; i < informationLabel.length; i++) {
 			if (i == 1 || i == 2) {
 				informationTextFieldPanel.add(informationPasswordField[i - 1] = new JPasswordField(25));
@@ -197,33 +171,21 @@ public class AddMembers extends JInternalFrame {
 		}
 		centerPanel.add("East", informationTextFieldPanel);
 
-		/***********************************************************************
-		 * for setting the layout for the panel,setting the font for the button*
-		 * and adding the button to the panel.								   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
+
 		insertInformationButtonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		insertInformationButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		insertInformationButtonPanel.add(insertInformationButton);
 		centerPanel.add("South", insertInformationButtonPanel);
 		cp.add("Center", centerPanel);
 
-		/***********************************************************************
-		 * for setting the layout for the panel,setting the font for the button*
-		 * adding the button to the panel & setting the border.				   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
+
 		southPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		OKButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		southPanel.add(OKButton);
 		southPanel.setBorder(BorderFactory.createEtchedBorder());
 		cp.add("South", southPanel);
 
-		/***********************************************************************
-		 * for adding the action listener to the button,first the text will be *
-		 * taken from the JTextField[] and make the connection for database,   *
-		 * after that update the table in the database with the new value      *
-		 ***********************************************************************/
+
 		insertInformationButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				//for checking if there is a missing information

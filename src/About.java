@@ -1,21 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 
-/**
- *A public class
- */
 public class About extends JPanel {
 	//constructor of about
 	public About() {
@@ -28,7 +13,6 @@ public class About extends JPanel {
 		//for creating the label and setting the text
 		JLabel label2 = new JLabel("<html><li> Library Management System"
 		        + "</li><li><p>Ver# 1.0</li>");
-		        //+ "<p>Copyright<font size=\"2\">&copy;</font> 2007 - 2008</li></html>");
 		//for setting the font to the label
 		label2.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		//for adding the lable to the panel

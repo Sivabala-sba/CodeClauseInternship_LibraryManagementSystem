@@ -1,24 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
-
-//import the packages for using the classes in them into the program
-
 import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class Borrow {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	private Connection connection = null;
 	private Statement statement = null;
@@ -63,11 +46,7 @@ public class Borrow {
 		catch (Exception e) {
 			System.out.println("Borrow.java\n" + e.toString());
 		}
-		/***************************************************************
-		 * for making the connection,creating the statement and update *
-		 * the table in the database. After that,closing the statmenet *
-		 * and connection. There is catch block SQLException for error *
-		 ***************************************************************/
+
 		try {
 			connection = DriverManager.getConnection(DATABASE_URL,USER_NAME,PASSWORD);
 			statement = connection.createStatement();
@@ -99,11 +78,7 @@ public class Borrow {
 		catch (Exception e) {
 			System.out.println("Borrow.java\n" + e.toString());
 		}
-		/***************************************************************
-		 * for making the connection,creating the statement and update *
-		 * the table in the database. After that,closing the statmenet *
-		 * and connection. There is catch block SQLException for error *
-		 ***************************************************************/
+
 		try {
 			connection = DriverManager.getConnection(DATABASE_URL,USER_NAME,PASSWORD);
 			statement = connection.createStatement();

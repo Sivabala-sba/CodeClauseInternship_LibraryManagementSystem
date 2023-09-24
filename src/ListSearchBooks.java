@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import javax.swing.table.TableColumn;
 import java.awt.*;
@@ -19,13 +7,7 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.sql.SQLException;
 
-/**
- *A public class
- */
 public class ListSearchBooks extends JInternalFrame {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for creating the North Panel
 	private JPanel northPanel = new JPanel();
@@ -54,9 +36,6 @@ public class ListSearchBooks extends JInternalFrame {
 		//for getting the graphical user interface components display area
 		Container cp = getContentPane();
 
-		/***********************************************************************
-		 *for setting the required information for the ResultSetTableModel class*
-		 ************************************************************************/
 		final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 		//final String DATABASE_URL = "jdbc:odbc:JLibrary";
         final String DATABASE_URL = "jdbc:mysql://localhost:3306/library";
@@ -115,7 +94,7 @@ public class ListSearchBooks extends JInternalFrame {
 				column.setPreferredWidth(30);
 			if (i == 11) //Availble
 				column.setPreferredWidth(30);
-                        if (i == 12) //ShelfNo
+			if (i == 12) //ShelfNo
 				column.setPreferredWidth(30);
 		}
 		//for setting the font to the label

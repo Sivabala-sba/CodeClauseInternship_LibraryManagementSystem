@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,13 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- *A public class
- */
 public class BorrowBooks extends JInternalFrame {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for creating the North Panel
 	private JPanel northPanel = new JPanel();
@@ -133,11 +115,6 @@ private DateButton return_date;
 		//for setting the layout for the internal panel
 		informationPanel.setLayout(new GridLayout(4, 2, 1, 1));
 
-		/***********************************************************************
-		 * for adding the strings to the labels, for setting the font 		   *
-		 * and adding these labels to the panel.							   *
-		 * finally adding the panel to the container						   *
-		 ***********************************************************************/
 		for (int i = 0; i < informationLabel.length; i++) {
 			informationPanel.add(informationLabel[i] = new JLabel(informationString[i]));
 			informationLabel[i].setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -185,11 +162,7 @@ private DateButton return_date;
 		//for adding the panel to the container
 		cp.add("South", southPanel);
 
-		/***********************************************************************
-		 * for adding the action listener to the button,first the text will be *
-		 * taken from the JTextField[] and make the connection for database,   *
-		 * after that update the table in the database with the new value      *
-		 ***********************************************************************/
+
 		borrowButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				//for checking if there is a missing information

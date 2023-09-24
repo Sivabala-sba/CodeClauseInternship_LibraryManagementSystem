@@ -1,17 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ganesh Sharma
- */
-
-
-//import the packages for using the classes in them into the program
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.print.PageFormat;
@@ -22,9 +8,6 @@ import java.util.StringTokenizer;
 import java.util.Vector;
 
 public class PrintingMembers extends JInternalFrame implements Printable {
-	/***************************************************************************
-	 ***      declaration of the private variables used in the program       ***
-	 ***************************************************************************/
 
 	//for setting the connection and statement
 	private Connection connection = null;
@@ -59,11 +42,6 @@ public class PrintingMembers extends JInternalFrame implements Printable {
 		catch (Exception e) {
 			System.out.println(e.toString());
 		}
-		/***************************************************************
-		 * for making the connection,creating the statement and update *
-		 * the table in the database. After that,closing the statmenet *
-		 * and connection. There is catch block SQLException for error *
-		 ***************************************************************/
 		try {
 			connection = DriverManager.getConnection(URL,"root","1234");
 			statement = connection.createStatement();
